@@ -20,47 +20,88 @@ console.log("Tipo de dato de cantidad:", typeof cantidad); // 'number'
 document.write("Tipo de dato de cantidad: " + typeof cantidad + "<br>"); // Muestra en el navegador
 alert("Tipo de dato de cantidad: " + typeof cantidad); // Muestra en una alerta
 
-//Ejercicio 3
-/*Una tienda ofrece un 25% de descuento por cada compra. Un cliente desea
-saber cuánto deberá pagar por su compra.*/
-let precioOriginal = 1380;
+// 1. Descuento del 25%
+function calcularDescuento(precio) {
+    return precio * 0.75; // Aplicar el 25% de descuento
+}
 
-let descuento = 25;
+// 2. Inversión con interés del 2%
+function calcularGanancia(capital) {
+    return capital * 0.02; // Calcular el 2% de ganancia
+}
 
-let precioDescuento = precioOriginal - (precioOriginal * descuento / 100);
+// 3. Calificación final
+function calcularCalificacion(parcial1, parcial2, parcial3, examenFinal, trabajoFinal) {
+    const promedioParciales = (parcial1 + parcial2 + parcial3) / 3;
+    return (promedioParciales * 0.55) + (examenFinal * 0.30) + (trabajoFinal * 0.15);
+}
 
-console.log("El precio con descuento es: " + precioDescuento);
+// 4. Precio de venta con ganancia del 30%
+function calcularPrecioVenta(precioCompra) {
+    return precioCompra * 1.30; // Aumentar el 30% al precio de compra
+}
 
-/*Una tienda ofrece un 60% de descuento por cada compra. Un cliente desea
-saber cuánto deberá pagar por su compra.*/
+// 5. Monto a pagar en taxi
+function calcularMontoTaxi(kilometros, minutos) {
+    return (kilometros * 15000) + (minutos * 2000); // Calcular el costo total
+}
 
-let preciodeventa = 2090;
+// 6. Cuadrado de tres números
+function calcularCuadrados(num1, num2, num3) {
+    return [num1 ** 2, num2 ** 2, num3 ** 2]; // Devolver los cuadrados de los números
+}
 
-let descuento_2 = 60;
+// 7. Distribución del presupuesto
+function distribuirPresupuesto(presupuesto) {
+    const ginecologia = presupuesto * 0.40;
+    const traumatologia = presupuesto * 0.30;
+    const pediatria = presupuesto * 0.30;
+    return { ginecologia, traumatologia, pediatria };
+}
 
-let preciodelDescuento = preciodeventa - (preciodeventa * 60 / 100);
+// 9. Porcentaje de inversión
+function calcularPorcentajeInversion(inversion1, inversion2, inversion3) {
+    const total = inversion1 + inversion2 + inversion3;
+    const porcentaje1 = (inversion1 / total) * 100;
+    const porcentaje2 = (inversion2 / total) * 100;
+    const porcentaje3 = (inversion3 / total) * 100;
+    return { porcentaje1, porcentaje2, porcentaje3 };
+}
 
-console.log("El Descuento es de " + preciodelDescuento);
+// 10. Calculadora básica
+function calculadora(num1, num2, operacion) {
+    switch (operacion) {
+        case "+":
+            return num1 + num2;
+        case "-":
+            return num1 - num2;
+        case "*":
+            return num1 * num2;
+        case "/":
+            return num1 / num2;
+        default:
+            return "Operación no válida";
+    }
+}
 
-//Ejercicio 4
-/*Suponga que un individuo desea invertir su capital en un banco y desea saber
-cuánto dinero ganara después de un mes si el banco paga a razón de 2%
-mensual.*/
-let capital = 1000;
-let ganancia = capital * 0.02;
-let total = capital + ganancia;
+// Ejemplos de uso en la consola
+console.log("1. Precio final con descuento:", calcularDescuento(100000)); // 75000
+console.log("2. Ganancia después de un mes:", calcularGanancia(5000000)); // 100000
+console.log("3. Calificación final:", calcularCalificacion(4.0, 3.5, 4.5, 4.0, 5.0)); // 4.225
+console.log("4. Precio de venta con ganancia:", calcularPrecioVenta(200000)); // 260000
+console.log("5. Monto a pagar en taxi:", calcularMontoTaxi(10, 30)); // 210000
+console.log("6. Cuadrados de los números:", calcularCuadrados(2, 3, 4)); // [4, 9, 16]
 
-console.log(`Ganancia: $${ganancia}`);
-console.log(`Total después de un mes: $${total}`);
+const presupuesto = distribuirPresupuesto(1000000000);
+console.log("7. Distribución del presupuesto:");
+console.log("Ginecología:", presupuesto.ginecologia); // 400000000
+console.log("Traumatología:", presupuesto.traumatologia); // 300000000
+console.log("Pediatría:", presupuesto.pediatria); // 300000000
 
-/*Suponga que un individuo desea invertir su capital en un banco y desea saber
-cuánto dinero ganara después de un mes si el banco paga a razón de 12%
-mensual.*/
+const porcentajes = calcularPorcentajeInversion(500000, 300000, 200000);
+console.log("9. Porcentaje de inversión:");
+console.log("Inversión 1:", porcentajes.porcentaje1); // 50
+console.log("Inversión 2:", porcentajes.porcentaje2); // 30
+console.log("Inversión 3:", porcentajes.porcentaje3); // 20
 
-let Capital = 3550;
-let ganacias = capital * 0.12;
-
-let Total = ganacias + capital;
-
-console.log(`ganacias: $${ganacias}`);
-console.log(`Total despues de un mes: $${Total}`);
+console.log("10. Resultado de la operación (10 + 5):", calculadora(10, 5, "+")); // 15
