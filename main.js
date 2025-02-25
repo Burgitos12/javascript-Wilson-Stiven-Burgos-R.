@@ -1,3 +1,4 @@
+/*
 // Ejercicio 1
 let nombre = "Stiven Burgos";
 let edad = 19; // La edad debería ser un número, no una cadena
@@ -11,7 +12,7 @@ console.log(rojo + "Mi nombre es " + nombre + ", tengo " + edad + " años y vivo
 /* Crea una variable llamada precio y asígnale un valor decimal,
    luego crea otra variable llamada cantidad y asígnale un valor entero.
    Muestra el tipo de dato de cada variable en la consola. */
-
+/*
 let precio = 2.14;
 let cantidad = 20;
 
@@ -105,3 +106,78 @@ console.log("Inversión 2:", porcentajes.porcentaje2); // 30
 console.log("Inversión 3:", porcentajes.porcentaje3); // 20
 
 console.log("10. Resultado de la operación (10 + 5):", calculadora(10, 5, "+")); // 15
+
+//ESTRUCTURAS DE CONTROL
+//EJEMPLO 1 - DECLARAR DOS VARIABLES UNA QUE SEA EL NOMNRE Y OTRA LA EDAD, Y MORSTRAR SI ES MAYOR DE EDAD O NO.
+
+let nombre1 = prompt ("Ingrese su nombre");
+let edad1 = parseInt(prompt("Ingrese su edad"));
+
+if (edad1 >18) {
+    alert("hola" + nombre1 + " Eres mayor de edad")
+}
+
+// El usuario digite nombre y edad con la siguiente verificación
+/* 
+1 a 18 años es joven
+19 a 40 años es adulto
+41 a 50 años es maduro
+51 en adelante es anciano
+*/
+/*
+let nombre2 = prompt("Ingrese su nombre");
+let edad2 = parseInt(prompt("Ingrese su edad"));
+
+if (edad2 >= 1 && edad2 <= 18) {
+  alert("Hola " + nombre2 + ", eres una persona joven");
+} else if (edad2 >= 19 && edad2 <= 40) {
+  alert("Hola " + nombre2 + ", eres una persona adulta");
+} else if (edad2 >= 41 && edad2 <= 50) {
+  alert("Hola " + nombre2 + ", eres una persona madura");
+} else if (edad2 >= 51) {
+  alert("Hola " + nombre2 + ", eres una persona anciana");
+} else {
+  alert("Por favor ingrese una edad válida");
+}
+*/
+//DECLARAR UNA VARIABLE NUMERICA QUE MUESTRE LA CUENTA REGRESIVA A LLEGAR A 0
+/*
+let cuentaAtras = 10
+
+while (cuentaAtras > 0){
+    alert(cuentaAtras)
+
+    cuentaAtras = cuentaAtras -  1
+}*/
+
+/*
+//5 EDADES DE DIFERENTE PERSONAS Y DETERMINAR SI ES MAYOR DE EDAD
+let N_personas = 0;
+
+do {
+    let nombre2 = prompt("Ingrese su nombre");
+    let edad2 = parseInt(prompt("Ingrese su edad"));
+
+    if (edad2 >= 18) {
+        alert(nombre2 + ", es mayor de edad");
+    } else {
+        alert(nombre2 + " es menor de edad");
+    }
+
+    N_personas++; 
+} while (N_personas < 5);  
+ */
+
+//FOR
+/*Imprimir las tablas de multiplicar del numero que el usuario ingrese
+Hasta el numero 10, mostrar en pantalla la siguiente sintaxis*/
+
+let numero = parseInt(prompt("Ingresa un número:"));
+let limite = parseInt(prompt("Ingresa el límite:"));
+
+let tabla = "Tabla de multiplicar del " + numero + ":\n";
+for (let i = 1; i <= limite; i++) {
+    tabla += numero + " * " + i + " = " + (numero * i) + "\n";
+}
+
+alert(tabla);
