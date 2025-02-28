@@ -171,7 +171,7 @@ do {
 //FOR
 /*Imprimir las tablas de multiplicar del numero que el usuario ingrese
 Hasta el numero 10, mostrar en pantalla la siguiente sintaxis*/
-
+/*
 let numero = parseInt(prompt("Ingresa un número:"));
 let limite = parseInt(prompt("Ingresa el límite:"));
 
@@ -180,4 +180,262 @@ for (let i = 1; i <= limite; i++) {
     tabla += numero + " * " + i + " = " + (numero * i) + "\n";
 }
 
-alert(tabla);
+alert(tabla);*/
+
+//1. Imprime por consola un mensaje si el usuario y contraseña
+//  concide con unos establecidos
+
+/*let usuario = prompt("Ingrese su usuario");
+let contraseña = parseInt(prompt("Ingrese contraseña")); 
+
+let contraseñaCorrecta = 1234; 
+
+switch (contraseña === contraseñaCorrecta) {
+    case true:
+        alert("Bienvenido " + usuario);
+        break;
+    default:
+        alert("Contraseña incorrecta");
+}*/
+
+//2. verifica si un numero es positivo 0
+//  negativo o cero, e imprime un mensaje
+
+
+/*let num = parseInt(prompt("Ingrese un número:"));
+
+switch (true) {
+    case num > 0:
+        alert("Positivo");
+        break;
+    case num < 0:
+        alert("Negativo");
+        break;
+    case num === 0:
+        alert("Cero");
+        break;
+    default:
+        alert("Número invalido");
+}*/
+
+
+
+
+//3. verifica si una persona puede votar o no,
+//  (mayor o igual a 18) e indica cuantos años le faltan
+
+/*let edad = parseInt(prompt("edad:"));
+let objetivo = 18;
+let añosFaltantes = objetivo - edad;
+
+switch (true) {
+    case edad >= 18:
+1
+    alert("eres mayor de edad");
+        break;
+    default:
+        alert("te faltan " + añosFaltantes + (" años para ser mayor de edad"));
+}*/
+
+//4. usa el operador ternario para asignar el valor,
+//  "adulto" o "menor" a una variable dependiendo de la edad
+
+
+
+
+
+/*function verificarEdad(edad) {
+    return edad >= 18 ? "Eres mayor de edad" : "Eres menor de edad";
+}
+
+
+console.log(verificarEdad(18));
+console.log(verificarEdad(20));
+console.log(verificarEdad(17));
+console.log(verificarEdad(10));*/
+
+
+
+
+//dias de la semamna
+
+ /* let dia = new Date().getDay();
+
+switch (dia) {
+    case 1:
+        console.log("Hoy es lunes");
+        break;
+    case 2:
+        console.log("Hoy es martes");
+        break;
+    case 3:
+        console.log("Hoy es miércoles");
+        break;
+    case 4:
+        console.log("Hoy es jueves");
+        break;
+    case 5:
+        console.log("Hoy es viernes");
+        break;
+    default:
+        console.log("Hoy es fin de semana");
+}*/
+
+
+/*
+comprobar edades
+
+1 a 18 años es joven
+19 a 40 años es adulto
+41 a 50 años es maduro
+51 en adelante es anciano
+
+let edad = parseInt(prompt("Ingrese su edad"));
+
+switch(edad) {
+
+    case(edad >= 1 && edad2 <= 18):
+    alert("eres una persona joven");
+    break;
+
+    case(edad >= 19 && edad2 <= 40):
+    alert("eres una persona joven");
+    break;
+
+    case(edad >= 41 && edad2 <= 50):
+    alert("eres una persona joven");
+    break;
+
+    default:
+        alert(" eres una persona anciana");
+}*/
+
+
+
+/*Ejercicio 1. 
+Dada las 3 calificaciones que el estudiante obtuvo en un curso
+a) Determinar su promedio
+b) Indicar si el estudiante aprobó o no aprobó el curso.
+Las notas deben ser de 1 a 10 y aprueba con un promedio mayor de 6*/
+
+// Función para calcular el promedio y determinar si aprueba
+/*function calcularPromedio(nota1, nota2, nota3) {
+    // Verificar que las notas estén en el rango válido (1 a 10)
+    if (nota1 < 1 || nota1 > 10 || nota2 < 1 || nota2 > 10 || nota3 < 1 || nota3 > 10) {
+        alert("Las notas deben estar en el rango de 1 a 10.");
+        return;
+    }
+
+    // Calcular el promedio y redondearlo a un número entero
+    const promedio = Math.round((nota1 + nota2 + nota3) / 3);
+
+    // Determinar si aprueba o no
+    if (promedio > 6) {
+        alert(`Promedio: ${promedio} - Aprueba.`);
+    } else {
+        alert(`Promedio: ${promedio} - No aprueba.`);
+    }
+}
+
+// Ejemplo de uso
+const nota1 = 7;
+const nota2 = 8;
+const nota3 = 5;
+
+calcularPromedio(nota1, nota2, nota3); // Muestra una ventana emergente con el resultado*/
+
+/* Ejercicio 2 
+Leer dos números y los imprima en forma ascendente.*/
+
+// Solicitar los dos números al usuario
+/*const numero1 = parseFloat(prompt("Ingrese el primer número:"));
+const numero2 = parseFloat(prompt("Ingrese el segundo número:"));
+
+// Verificar si los valores ingresados son números válidos
+if (isNaN(numero1) || isNaN(numero2)) {
+    alert("Por favor, ingrese números válidos.");
+} else {
+    // Determinar el orden ascendente
+    if (numero1 < numero2) {
+        alert(`Números en orden ascendente: ${numero1}, ${numero2}`);
+    } else if (numero1 > numero2) {
+        alert(`Números en orden ascendente: ${numero2}, ${numero1}`);
+    } else {
+        alert(`Los números son iguales: ${numero1}`);
+    }
+}*/
+
+/*Ejercicio 3
+Dado un numero entre 1 y 7 escriba su correspondiente día de la semana
+así:
+DIA1 = LUNES
+DIA2 = MARTES
+DIA3 = MIECOLES
+DIA4 = JUEVES
+DIA5 = VIERNES
+DIA6 = SABADO
+DIA7 = DOMINGO3*/
+
+// Solicitar al usuario que ingrese un número entre 1 y 7
+/*const numero = parseInt(prompt("Ingrese un número entre 1 y 7:"));
+
+// Verificar si el número está en el rango válido
+if (isNaN(numero) || numero < 1 || numero > 7) {
+    alert("Por favor, ingrese un número válido entre 1 y 7.");
+} else {
+    let dia;
+
+    // Determinar el día de la semana usando switch
+    switch (numero) {
+        case 1:
+            dia = "LUNES";
+            break;
+        case 2:
+            dia = "MARTES";
+            break;
+        case 3:
+            dia = "MIÉRCOLES";
+            break;
+        case 4:
+            dia = "JUEVES";
+            break;
+        case 5:
+            dia = "VIERNES";
+            break;
+        case 6:
+            dia = "SÁBADO";
+            break;
+        case 7:
+            dia = "DOMINGO";
+            break;
+    }
+
+    // Mostrar el resultado en una ventana emergente
+    alert(`DIA${numero} = ${dia}`);
+}*/
+
+/*Ejercicio 4
+Un obrero necesita calcular su salario semanal, el cual se obtiene de la sig.
+manera:
+a) Si trabaja 40 horas o menos se le paga $16000 por hora
+b) Si trabaja más de 40 horas se le paga $20000 por hora*/
+
+// Solicitar al usuario la cantidad de horas trabajadas
+const horasTrabajadas = parseFloat(prompt("Ingrese la cantidad de horas trabajadas en la semana:"));
+
+// Verificar si la entrada es válida
+if (isNaN(horasTrabajadas) || horasTrabajadas < 0) {
+    alert("Por favor, ingrese un número válido de horas.");
+} else {
+    let salario;
+
+    // Calcular el salario según las horas trabajadas
+    if (horasTrabajadas <= 40) {
+        salario = horasTrabajadas * 16000; // $16,000 por hora
+    } else {
+        salario = 40 * 16000 + (horasTrabajadas - 40) * 20000; // $16,000 por las primeras 40 horas y $20,000 por las horas extras
+    }
+
+    // Mostrar el salario en una ventana emergente
+    alert(`Su salario semanal es: $${salario.toLocaleString()}`);
+}
